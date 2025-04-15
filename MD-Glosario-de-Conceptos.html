@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+<meta name="author" content="Diego Iturrieta" />
+
+<meta name="date" content="2025-04-15" />
+
+<title>Cuaderno con Conceptos de IA</title>
+
+<script src="MD-Glosario-de-Conceptos_files/header-attrs-2.25/header-attrs.js"></script>
+<script src="MD-Glosario-de-Conceptos_files/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="MD-Glosario-de-Conceptos_files/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="MD-Glosario-de-Conceptos_files/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="MD-Glosario-de-Conceptos_files/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="MD-Glosario-de-Conceptos_files/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="MD-Glosario-de-Conceptos_files/navigation-1.1/tabsets.js"></script>
+<link href="MD-Glosario-de-Conceptos_files/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="MD-Glosario-de-Conceptos_files/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">Cuaderno con Conceptos de IA</h1>
+<h4 class="author">Diego Iturrieta</h4>
+<h4 class="date">2025-04-15</h4>
+
+</div>
+
+
+<div
+id="glosario-práctico-y-conceptual-sobre-llms-para-investigadores-sociales"
+class="section level1">
+<h1>📘 Glosario Práctico y Conceptual sobre LLMs para Investigadores
+Sociales</h1>
+<p>Este glosario tiene como objetivo entregar definiciones claras,
+ejemplos aplicados al análisis discursivo, y fundamentos prácticos para
+comprender el uso de modelos de lenguaje de gran tamaño (LLMs) en
+investigación política y social.</p>
+<hr />
+<div id="conceptos-fundamentales" class="section level2">
+<h2>🔑 Conceptos Fundamentales</h2>
+<div id="llm-large-language-model" class="section level3">
+<h3>🧠 LLM (Large Language Model)</h3>
+<p><strong>Definición:</strong><br />
+Modelo de lenguaje con miles de millones de parámetros, entrenado sobre
+grandes corpus de texto para entender y generar lenguaje natural.</p>
+<p><strong>Ejemplo en política:</strong><br />
+Puedes usar un LLM como LLaMA 3.1 para clasificar discursos de alcaldes
+según si promueven ideas de “mano dura” o no.</p>
+<hr />
+</div>
+<div id="parámetros" class="section level3">
+<h3>🧮 Parámetros</h3>
+<p><strong>Definición:</strong><br />
+Son los “pesos” que el modelo ajusta durante su entrenamiento.
+Determinan cómo el modelo interpreta el texto.</p>
+<p><strong>Ejemplo:</strong><br />
+LLaMA 3.1 de 4B tiene 4.000 millones de parámetros. Modelos más grandes
+como GPT-3 pueden tener 175B.</p>
+<hr />
+</div>
+<div id="inferencia" class="section level3">
+<h3>🗣️ Inferencia</h3>
+<p><strong>Definición:</strong><br />
+Fase en la que usas el modelo ya entrenado para predecir, clasificar o
+generar texto.</p>
+<p><strong>Ejemplo:</strong><br />
+Cuando pasas un discurso al modelo y te responde: “Sí, este discurso
+promueve políticas punitivas”, estás haciendo inferencia.</p>
+<hr />
+</div>
+<div id="fine-tuning" class="section level3">
+<h3>🔄 Fine-tuning</h3>
+<p><strong>Definición:</strong><br />
+Reentrenar un modelo preexistente con tus propios datos para que se
+adapte a un dominio o tarea específica.</p>
+<p><strong>Ejemplo:</strong><br />
+Usar 300 discursos etiquetados por ti para ajustar LLaMA y que aprenda a
+reconocer con más precisión ideas de “militarización”.</p>
+<hr />
+</div>
+</div>
+<div id="componentes-del-proceso" class="section level2">
+<h2>📦 Componentes del Proceso</h2>
+<div id="token" class="section level3">
+<h3>📄 Token</h3>
+<p><strong>Definición:</strong><br />
+Unidad mínima de texto que el modelo entiende. Puede ser una palabra,
+parte de una palabra o incluso signos de puntuación.</p>
+<p><strong>Ejemplo:</strong><br />
+“Seguridad pública” puede dividirse en tokens como [“Seg”, “uridad”, ”
+pública”] dependiendo del modelo.</p>
+<hr />
+</div>
+<div id="embedding" class="section level3">
+<h3>📏 Embedding</h3>
+<p><strong>Definición:</strong><br />
+Representación numérica de un texto (token, frase, oración) en un
+espacio vectorial. Permite comparar semánticamente distintos textos.</p>
+<p><strong>Ejemplo:</strong><br />
+Dos discursos con ideas similares tendrán embeddings cercanos entre sí,
+lo que permite hacer clustering.</p>
+<hr />
+</div>
+<div id="attention" class="section level3">
+<h3>🧠 Attention</h3>
+<p><strong>Definición:</strong><br />
+Mecanismo que permite al modelo “poner atención” en partes relevantes
+del texto cuando procesa una palabra.</p>
+<p><strong>Ejemplo:</strong><br />
+En la frase “La alcaldesa propuso aumentar la dotación policial”, el
+modelo presta atención a “aumentar” y “policial” para entender el foco
+del discurso.</p>
+<hr />
+</div>
+<div id="transformer" class="section level3">
+<h3>🧩 Transformer</h3>
+<p><strong>Definición:</strong><br />
+Arquitectura base de casi todos los LLMs actuales. Introducida en el
+paper “Attention is All You Need”.</p>
+<p><strong>Ejemplo:</strong><br />
+GPT, BERT y LLaMA son todos modelos basados en transformers.</p>
+<hr />
+</div>
+<div id="prompt" class="section level3">
+<h3>🗂️ Prompt</h3>
+<p><strong>Definición:</strong><br />
+Instrucción o entrada que das al modelo para obtener una respuesta.</p>
+<p><strong>Ejemplo:</strong><br />
+Prompt simple:<br />
+&gt; “Clasifica el siguiente discurso según si usa una narrativa de mano
+dura: {discurso}”</p>
+<hr />
+</div>
+<div id="prompt-engineering" class="section level3">
+<h3>🔍 Prompt Engineering</h3>
+<p><strong>Definición:</strong><br />
+Técnica para diseñar prompts más efectivos, claros y orientados a la
+tarea deseada.</p>
+<p><strong>Ejemplo:</strong><br />
+Prompt mejorado: &gt; “A partir del siguiente texto, indica si el
+discurso refleja una política de mano dura. Justifica tu respuesta.
+Texto: {discurso}”</p>
+<hr />
+</div>
+</div>
+<div id="en-entorno-de-desarrollo" class="section level2">
+<h2>⚙️ En entorno de desarrollo</h2>
+<div id="ollama" class="section level3">
+<h3>💻 Ollama</h3>
+<p><strong>Definición:</strong><br />
+Herramienta que permite correr modelos LLM localmente en tu computador
+(como LLaMA) de forma optimizada.</p>
+<p><strong>Ejemplo:</strong><br />
+Estás usando <code>ollama run llama3.1</code> para hacer inferencia
+directamente desde CMD.</p>
+<hr />
+</div>
+<div id="python" class="section level3">
+<h3>🐍 Python</h3>
+<p><strong>Definición:</strong><br />
+Lenguaje de programación con el que puedes integrar modelos, procesar
+datos y automatizar tu análisis temático.</p>
+<p><strong>Ejemplo:</strong><br />
+Leer discursos desde Excel, limpiarlos con <code>pandas</code>, y
+enviarlos al modelo con una petición vía <code>subprocess</code> u
+<code>Ollama API</code>.</p>
+<hr />
+</div>
+<div id="pandas" class="section level3">
+<h3>📊 Pandas</h3>
+<p><strong>Definición:</strong><br />
+Librería de Python para análisis y manipulación de datos estructurados
+(tablas, Excel, CSV).</p>
+<p><strong>Ejemplo:</strong><br />
+Cargar tu base de discursos en Excel y recorrer cada discurso con un
+loop para hacer inferencia.</p>
+<hr />
+</div>
+<div id="transformers-librería" class="section level3">
+<h3>📚 Transformers (librería)</h3>
+<p><strong>Definición:</strong><br />
+Librería de <code>Hugging Face</code> que permite trabajar con miles de
+modelos preentrenados. Puedes hacer clasificación, embeddings, QA,
+etc.</p>
+<p><strong>Ejemplo:</strong><br />
+Una vez que lleves el modelo a Python, podés usar
+<code>transformers.pipeline("text-classification")</code> para hacer
+clasificaciones automáticas.</p>
+<hr />
+</div>
+</div>
+<div id="otros-términos-relevantes" class="section level2">
+<h2>🧪 Otros términos relevantes</h2>
+<div id="quantization" class="section level3">
+<h3>⚙️ Quantization</h3>
+<p><strong>Definición:</strong><br />
+Técnica para reducir el tamaño de un modelo bajando la precisión de los
+parámetros (por ejemplo, de 16 bits a 4 bits).</p>
+<p><strong>Ejemplo:</strong><br />
+Tu modelo LLaMA 4B probablemente esté cuantizado a 4 bits, lo que
+permite correrlo en GPU con 8 GB VRAM.</p>
+<hr />
+</div>
+<div id="lora-low-rank-adaptation" class="section level3">
+<h3>🧠 LoRA (Low-Rank Adaptation)</h3>
+<p><strong>Definición:</strong><br />
+Técnica ligera para hacer fine-tuning sin modificar todos los parámetros
+del modelo.</p>
+<p><strong>Ejemplo:</strong><br />
+Podrías ajustar tu modelo a discursos chilenos sin necesitar grandes
+recursos computacionales.</p>
+<hr />
+</div>
+<div id="zero-shot-few-shot" class="section level3">
+<h3>📌 Zero-shot / Few-shot</h3>
+<p><strong>Definición:</strong><br />
+- Zero-shot: el modelo responde sin ver ejemplos. - Few-shot: el modelo
+recibe 1–5 ejemplos en el prompt para “aprender” el patrón.</p>
+<p><strong>Ejemplo:</strong><br />
+Zero-shot: “¿Este discurso es punitivista?”<br />
+Few-shot: Añades 2 ejemplos antes del discurso objetivo.</p>
+<hr />
+</div>
+<div id="dataset" class="section level3">
+<h3>📂 Dataset</h3>
+<p><strong>Definición:</strong><br />
+Colección de datos estructurados que se usa para entrenar o validar
+modelos.</p>
+<p><strong>Ejemplo:</strong><br />
+Tu Excel de discursos es un dataset que podés usar para clasificación,
+fine-tuning o embeddings.</p>
+<hr />
+</div>
+<div id="overfitting" class="section level3">
+<h3>🧠 Overfitting</h3>
+<p><strong>Definición:</strong><br />
+Cuando el modelo se adapta demasiado a los datos de entrenamiento y
+pierde capacidad de generalizar.</p>
+<p><strong>Ejemplo:</strong><br />
+Si haces fine-tuning con muy pocos discursos, el modelo podría funcionar
+solo con esos y fallar con nuevos.</p>
+<hr />
+</div>
+<div id="pipeline" class="section level3">
+<h3>🔄 Pipeline</h3>
+<p><strong>Definición:</strong><br />
+Secuencia de pasos automatizados para procesar datos, pasarlos por un
+modelo, y guardar los resultados.</p>
+<p><strong>Ejemplo:</strong><br />
+Leer discurso ➜ enviar a LLaMA ➜ clasificar ➜ guardar en Excel ➜
+repetir.</p>
+<hr />
+<p>¿Quieres que te prepare ahora la segunda parte: el inicio del
+cuaderno con estructura Markdown + ejemplo de flujo para análisis
+temático con LLaMA y pandas?</p>
+</div>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

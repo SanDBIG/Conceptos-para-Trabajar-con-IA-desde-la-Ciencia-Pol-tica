@@ -1,0 +1,212 @@
+---
+title: "Cuaderno con Conceptos de IA"
+author: "Diego Iturrieta"
+date: "2025-04-15"
+output:
+  html_document: 
+    self_contained: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# 📘 Glosario Práctico y Conceptual sobre LLMs para Investigadores Sociales
+
+Este glosario tiene como objetivo entregar definiciones claras, ejemplos aplicados al análisis discursivo, y fundamentos prácticos para comprender el uso de modelos de lenguaje de gran tamaño (LLMs) en investigación política y social.
+
+---
+
+## 🔑 Conceptos Fundamentales
+
+### 🧠 LLM (Large Language Model)
+**Definición:**  
+Modelo de lenguaje con miles de millones de parámetros, entrenado sobre grandes corpus de texto para entender y generar lenguaje natural.
+
+**Ejemplo en política:**  
+Puedes usar un LLM como LLaMA 3.1 para clasificar discursos de alcaldes según si promueven ideas de "mano dura" o no.
+
+---
+
+### 🧮 Parámetros
+**Definición:**  
+Son los “pesos” que el modelo ajusta durante su entrenamiento. Determinan cómo el modelo interpreta el texto.
+
+**Ejemplo:**  
+LLaMA 3.1 de 4B tiene 4.000 millones de parámetros. Modelos más grandes como GPT-3 pueden tener 175B.
+
+---
+
+### 🗣️ Inferencia
+**Definición:**  
+Fase en la que usas el modelo ya entrenado para predecir, clasificar o generar texto.
+
+**Ejemplo:**  
+Cuando pasas un discurso al modelo y te responde: "Sí, este discurso promueve políticas punitivas", estás haciendo inferencia.
+
+---
+
+### 🔄 Fine-tuning
+**Definición:**  
+Reentrenar un modelo preexistente con tus propios datos para que se adapte a un dominio o tarea específica.
+
+**Ejemplo:**  
+Usar 300 discursos etiquetados por ti para ajustar LLaMA y que aprenda a reconocer con más precisión ideas de "militarización".
+
+---
+
+## 📦 Componentes del Proceso
+
+### 📄 Token
+**Definición:**  
+Unidad mínima de texto que el modelo entiende. Puede ser una palabra, parte de una palabra o incluso signos de puntuación.
+
+**Ejemplo:**  
+"Seguridad pública" puede dividirse en tokens como ["Seg", "uridad", " pública"] dependiendo del modelo.
+
+---
+
+### 📏 Embedding
+**Definición:**  
+Representación numérica de un texto (token, frase, oración) en un espacio vectorial. Permite comparar semánticamente distintos textos.
+
+**Ejemplo:**  
+Dos discursos con ideas similares tendrán embeddings cercanos entre sí, lo que permite hacer clustering.
+
+---
+
+### 🧠 Attention
+**Definición:**  
+Mecanismo que permite al modelo "poner atención" en partes relevantes del texto cuando procesa una palabra.
+
+**Ejemplo:**  
+En la frase "La alcaldesa propuso aumentar la dotación policial", el modelo presta atención a "aumentar" y "policial" para entender el foco del discurso.
+
+---
+
+### 🧩 Transformer
+**Definición:**  
+Arquitectura base de casi todos los LLMs actuales. Introducida en el paper "Attention is All You Need".
+
+**Ejemplo:**  
+GPT, BERT y LLaMA son todos modelos basados en transformers.
+
+---
+
+### 🗂️ Prompt
+**Definición:**  
+Instrucción o entrada que das al modelo para obtener una respuesta.
+
+**Ejemplo:**  
+Prompt simple:  
+> "Clasifica el siguiente discurso según si usa una narrativa de mano dura: {discurso}"
+
+---
+
+### 🔍 Prompt Engineering
+**Definición:**  
+Técnica para diseñar prompts más efectivos, claros y orientados a la tarea deseada.
+
+**Ejemplo:**  
+Prompt mejorado:
+> "A partir del siguiente texto, indica si el discurso refleja una política de mano dura. Justifica tu respuesta. Texto: {discurso}"
+
+---
+
+## ⚙️ En entorno de desarrollo
+
+### 💻 Ollama
+**Definición:**  
+Herramienta que permite correr modelos LLM localmente en tu computador (como LLaMA) de forma optimizada.
+
+**Ejemplo:**  
+Estás usando `ollama run llama3.1` para hacer inferencia directamente desde CMD.
+
+---
+
+### 🐍 Python
+**Definición:**  
+Lenguaje de programación con el que puedes integrar modelos, procesar datos y automatizar tu análisis temático.
+
+**Ejemplo:**  
+Leer discursos desde Excel, limpiarlos con `pandas`, y enviarlos al modelo con una petición vía `subprocess` u `Ollama API`.
+
+---
+
+### 📊 Pandas
+**Definición:**  
+Librería de Python para análisis y manipulación de datos estructurados (tablas, Excel, CSV).
+
+**Ejemplo:**  
+Cargar tu base de discursos en Excel y recorrer cada discurso con un loop para hacer inferencia.
+
+---
+
+### 📚 Transformers (librería)
+**Definición:**  
+Librería de `Hugging Face` que permite trabajar con miles de modelos preentrenados. Puedes hacer clasificación, embeddings, QA, etc.
+
+**Ejemplo:**  
+Una vez que lleves el modelo a Python, podés usar `transformers.pipeline("text-classification")` para hacer clasificaciones automáticas.
+
+---
+
+## 🧪 Otros términos relevantes
+
+### ⚙️ Quantization
+**Definición:**  
+Técnica para reducir el tamaño de un modelo bajando la precisión de los parámetros (por ejemplo, de 16 bits a 4 bits).
+
+**Ejemplo:**  
+Tu modelo LLaMA 4B probablemente esté cuantizado a 4 bits, lo que permite correrlo en GPU con 8 GB VRAM.
+
+---
+
+### 🧠 LoRA (Low-Rank Adaptation)
+**Definición:**  
+Técnica ligera para hacer fine-tuning sin modificar todos los parámetros del modelo.
+
+**Ejemplo:**  
+Podrías ajustar tu modelo a discursos chilenos sin necesitar grandes recursos computacionales.
+
+---
+
+### 📌 Zero-shot / Few-shot
+**Definición:**  
+- Zero-shot: el modelo responde sin ver ejemplos.
+- Few-shot: el modelo recibe 1–5 ejemplos en el prompt para "aprender" el patrón.
+
+**Ejemplo:**  
+Zero-shot: "¿Este discurso es punitivista?"  
+Few-shot: Añades 2 ejemplos antes del discurso objetivo.
+
+---
+
+### 📂 Dataset
+**Definición:**  
+Colección de datos estructurados que se usa para entrenar o validar modelos.
+
+**Ejemplo:**  
+Tu Excel de discursos es un dataset que podés usar para clasificación, fine-tuning o embeddings.
+
+---
+
+### 🧠 Overfitting
+**Definición:**  
+Cuando el modelo se adapta demasiado a los datos de entrenamiento y pierde capacidad de generalizar.
+
+**Ejemplo:**  
+Si haces fine-tuning con muy pocos discursos, el modelo podría funcionar solo con esos y fallar con nuevos.
+
+---
+
+### 🔄 Pipeline
+**Definición:**  
+Secuencia de pasos automatizados para procesar datos, pasarlos por un modelo, y guardar los resultados.
+
+**Ejemplo:**  
+Leer discurso ➜ enviar a LLaMA ➜ clasificar ➜ guardar en Excel ➜ repetir.
+
+---
+
+¿Quieres que te prepare ahora la segunda parte: el inicio del cuaderno con estructura Markdown + ejemplo de flujo para análisis temático con LLaMA y pandas?
